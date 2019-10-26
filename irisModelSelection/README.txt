@@ -15,3 +15,6 @@ Tasks:
 5. Use k-fold and stratified k-fold for the model selection. Use both functions to split the training data to 4 folds.
 
 6. Generate the cross validation score by 4 folds with the Logistic Regression model.
+
+
+***RUN iris_modelSelection.py to execute all the above tasks***
