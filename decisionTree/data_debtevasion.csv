@@ -1,0 +1,11 @@
+ID,Marital,Estate,Income,Evade
+1,Single,Yes,125,No
+2,Married,No,100,No
+3,Single,No,70,No
+4,Married,Yes,120,No
+5,Divorced,No,95,Yes
+6,Married,No,60,No
+7,Divorced,Yes,220,No
+8,Single,No,85,Yes
+9,Married,No,75,No
+10,Single,No,90,Yes
