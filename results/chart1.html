@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-5478d5f7523f025372315daa9feea1a4"}, "mark": "line", "encoding": {"order": {"type": "quantitative", "field": "xrange"}, "x": {"type": "ordinal", "field": "xrange"}, "y": {"type": "quantitative", "field": "actual"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-5478d5f7523f025372315daa9feea1a4": [{"xrange": 50, "actual": 2}, {"xrange": 51, "actual": 1}, {"xrange": 52, "actual": 11}, {"xrange": 53, "actual": 8}, {"xrange": 54, "actual": 5}, {"xrange": 55, "actual": 5}, {"xrange": 56, "actual": 3}, {"xrange": 57, "actual": 6}, {"xrange": 58, "actual": 9}, {"xrange": 59, "actual": 3}, {"xrange": 60, "actual": 6}, {"xrange": 61, "actual": 6}, {"xrange": 62, "actual": 5}, {"xrange": 63, "actual": 9}, {"xrange": 64, "actual": 4}, {"xrange": 65, "actual": 4}, {"xrange": 66, "actual": 8}, {"xrange": 67, "actual": 6}, {"xrange": 68, "actual": 3}, {"xrange": 69, "actual": 8}, {"xrange": 70, "actual": 10}, {"xrange": 71, "actual": 3}, {"xrange": 72, "actual": 9}, {"xrange": 73, "actual": 7}, {"xrange": 74, "actual": 4}, {"xrange": 75, "actual": 2}, {"xrange": 76, "actual": 6}, {"xrange": 77, "actual": 6}, {"xrange": 78, "actual": 9}, {"xrange": 79, "actual": 6}, {"xrange": 80, "actual": 8}, {"xrange": 81, "actual": 7}, {"xrange": 82, "actual": 7}, {"xrange": 83, "actual": 5}, {"xrange": 84, "actual": 7}, {"xrange": 85, "actual": 2}, {"xrange": 86, "actual": 9}, {"xrange": 87, "actual": 5}, {"xrange": 88, "actual": 8}, {"xrange": 89, "actual": 5}, {"xrange": 90, "actual": 7}, {"xrange": 91, "actual": 14}, {"xrange": 92, "actual": 9}, {"xrange": 93, "actual": 13}, {"xrange": 94, "actual": 15}, {"xrange": 95, "actual": 10}, {"xrange": 96, "actual": 16}, {"xrange": 97, "actual": 27}, {"xrange": 98, "actual": 22}, {"xrange": 99, "actual": 187}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
